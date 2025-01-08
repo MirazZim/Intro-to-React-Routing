@@ -8,21 +8,27 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './Components/Home/Home';
-import Header from './Components/Header/Header';
+import About from './Components/About/About';
+import Contact from './Components/Contact/Contact';
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home></Home>
+    element: <Home></Home>,
+    
+    children : [
+      {
+        path: "/about",
+       element: <About></About>,
+      },
+      {
+        path: "/contact",
+       element: <Contact></Contact>,
+      },
+    ]
   },
-  {
-    path: "/about",
-    element: <Header></Header>,
-  },
-  {
-    path: "/Contact",
-    element: <div>Call me Right now</div>,
-  },
+
 ]);
 
 createRoot(document.getElementById('root')).render(
