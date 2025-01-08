@@ -9,6 +9,7 @@ const User = ({user}) => {
         borderRadius: '20px',
         margin:'2px'
     }
+    
     return (
         <div style={userStyle}>
             
